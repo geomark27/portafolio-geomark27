@@ -53,7 +53,7 @@ export default function About() {
               <div className={styles.statLabel}>Años de Experiencia</div>
             </div>
             <div className={styles.stat}>
-              <div className={styles.statValue}>50+</div>
+              <div className={styles.statValue}>10+</div>
               <div className={styles.statLabel}>Proyectos Completados</div>
             </div>
             <div className={styles.stat}>
