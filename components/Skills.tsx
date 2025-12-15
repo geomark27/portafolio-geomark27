@@ -55,7 +55,7 @@ export default function Skills() {
       <div className="container">
         <h2 className="section-title">Tech Stack</h2>
         <p className={styles.subtitle}>
-          Building Scalable Distributed Systems
+          Building Efficient Distributed Systems
         </p>
         
         <div className={styles.skillsContainer}>
