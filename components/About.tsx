@@ -9,7 +9,7 @@ export default function About() {
         <div className={styles.aboutContent}>
           <div className={styles.mainContent}>
             <p className={styles.intro}>
-              Backend Developer and AWS Solutions Architect with over 3 years of experience 
+              Software Developer and AWS Solutions Architect with over 3 years of experience 
               designing and building high-demand distributed systems.
             </p>
             

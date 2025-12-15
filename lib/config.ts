@@ -18,7 +18,7 @@ export const contactConfig = {
     message: 'Have a project in mind? Let\'s talk about how I can help you.',
     buttonText: 'Send Message',
   },
-  footer: '© 2025 Backend Developer Portfolio. Built with Next.js & TypeScript.',
+  footer: '© 2025 Software Developer Portfolio. Built with Next.js & TypeScript.',
 };
 
 export const contactLinks = [

@@ -1,4 +1,4 @@
-# Backend Developer Portfolio
+# Software Developer Portfolio
 
 Professional portfolio website built with Next.js 14, TypeScript, and GitHub API integration.
 
