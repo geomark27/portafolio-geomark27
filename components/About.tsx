@@ -4,44 +4,44 @@ export default function About() {
   return (
     <section className="section" id="about">
       <div className="container">
-        <h2 className="section-title">Sobre Mí</h2>
+        <h2 className="section-title">About Me</h2>
         
         <div className={styles.aboutContent}>
           <div className={styles.mainContent}>
             <p className={styles.intro}>
-              Backend Developer y AWS Solutions Architect con más de 3 años de experiencia 
-              diseñando y construyendo sistemas distribuidos de alta demanda.
+              Backend Developer and AWS Solutions Architect with over 3 years of experience 
+              designing and building high-demand distributed systems.
             </p>
             
             <p>
-              Mi especialidad es crear arquitecturas escalables y resilientes para plataformas 
-              empresariales complejas, incluyendo CRM, ERP y soluciones SaaS multitenant. 
-              He trabajado en proyectos que manejan millones de transacciones diarias, 
-              optimizando rendimiento y reduciendo costos de infraestructura.
+              My specialty is creating scalable and resilient architectures for complex 
+              enterprise platforms, including CRM, ERP, and multitenant SaaS solutions. 
+              I've worked on projects handling hundreds of daily transactions, 
+              optimizing performance and reducing infrastructure costs.
             </p>
 
             <div className={styles.highlights}>
               <div className={styles.highlight}>
-                <h3>🏗️ Arquitectura de Sistemas</h3>
+                <h3>🏗️ System Architecture</h3>
                 <p>
-                  Diseño de arquitecturas distribuidas, microservicios, event-driven systems 
-                  y patrones de alta disponibilidad.
+                  Design of distributed architectures, microservices, event-driven systems, 
+                  and high availability patterns.
                 </p>
               </div>
 
               <div className={styles.highlight}>
                 <h3>☁️ Cloud & DevOps</h3>
                 <p>
-                  Experiencia profunda en AWS (EC2, Lambda, RDS, S3, CloudFormation). 
-                  Implementación de pipelines CI/CD robustos y automatización de infraestructura.
+                  Deep experience in AWS (EC2, Lambda, RDS, S3, CloudFormation). 
+                  Implementation of robust CI/CD pipelines and infrastructure automation.
                 </p>
               </div>
 
               <div className={styles.highlight}>
-                <h3>⚡ Performance & Escalabilidad</h3>
+                <h3>⚡ Performance & Scalability</h3>
                 <p>
-                  Optimización de I/O, caching strategies, database indexing, y arquitecturas 
-                  que escalan horizontalmente bajo alta demanda.
+                  I/O optimization, caching strategies, database indexing, and architectures 
+                  that scale horizontally under high demand.
                 </p>
               </div>
             </div>
@@ -50,11 +50,11 @@ export default function About() {
           <div className={styles.stats}>
             <div className={styles.stat}>
               <div className={styles.statValue}>3+</div>
-              <div className={styles.statLabel}>Años de Experiencia</div>
+              <div className={styles.statLabel}>Years of Experience</div>
             </div>
             <div className={styles.stat}>
-              <div className={styles.statValue}>10+</div>
-              <div className={styles.statLabel}>Proyectos Completados</div>
+              <div className={styles.statValue}>20+</div>
+              <div className={styles.statLabel}>Completed Projects</div>
             </div>
             <div className={styles.stat}>
               <div className={styles.statValue}>AWS</div>

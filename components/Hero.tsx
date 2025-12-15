@@ -25,16 +25,16 @@ export default function Hero() {
           </h1>
 
           <p className={`${styles.subtitle} fade-in-up`}>
-            +3 años diseñando arquitecturas de alta demanda para plataformas CRM, ERP y SaaS multitenant.
-            Especializado en optimización de I/O, pipelines CI/CD y soluciones cloud-native.
+            +3 years designing high-demand architectures for CRM, ERP, and multitenant SaaS platforms.
+            Specialized in I/O optimization, CI/CD pipelines, and cloud-native solutions.
           </p>
 
           <div className={`${styles.cta} fade-in-up`}>
             <a href="#projects" className="btn btn-primary">
-              Ver Proyectos
+              View Projects
             </a>
             <a href="#contact" className="btn btn-secondary">
-              Contacto
+              Contact
             </a>
           </div>
 

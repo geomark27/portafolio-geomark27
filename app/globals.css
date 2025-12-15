@@ -7,7 +7,7 @@
 }
 
 :root {
-  /* Color Palette - Dark Theme */
+  /* Color Palette - Dark Theme (default) */
   --color-bg-primary: #0a0e1a;
   --color-bg-secondary: #111827;
   --color-bg-tertiary: #1a202e;
@@ -64,6 +64,32 @@
   --shadow-glow-cyan: 0 0 20px rgba(6, 182, 212, 0.3);
   --shadow-glow-emerald: 0 0 20px rgba(16, 185, 129, 0.3);
   --shadow-glow-purple: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+/* Light Theme */
+[data-theme='light'] {
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f9fafb;
+  --color-bg-tertiary: #f3f4f6;
+  --color-bg-elevated: #e5e7eb;
+  
+  --color-text-primary: #111827;
+  --color-text-secondary: #374151;
+  --color-text-tertiary: #6b7280;
+  --color-text-muted: #9ca3af;
+  
+  --color-border: #d1d5db;
+  --color-border-light: #e5e7eb;
+  
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(209, 213, 219, 0.5);
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+  --shadow-glow-cyan: 0 0 20px rgba(6, 182, 212, 0.2);
+  --shadow-glow-emerald: 0 0 20px rgba(16, 185, 129, 0.2);
+  --shadow-glow-purple: 0 0 20px rgba(139, 92, 246, 0.2);
 }
 
 html {
