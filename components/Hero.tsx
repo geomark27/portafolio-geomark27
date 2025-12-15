@@ -14,7 +14,7 @@ export default function Hero() {
               <p className={styles.terminalLine}>
                 <span className={styles.prompt}>$</span> whoami
               </p>
-              <p className={styles.terminalOutput}>Backend Developer & AWS Solutions Architect</p>
+              <p className={styles.terminalOutput}>Software Developer & AWS Solutions Architect</p>
             </div>
           </div>
 
