@@ -1,4 +1,5 @@
 import { getProjects } from '@/lib/github';
+import { featuredWork } from '@/lib/profile';
 import styles from './Projects.module.css';
 
 export default async function Projects() {
@@ -12,6 +13,37 @@ export default async function Projects() {
         <p className={styles.subtitle}>
           Public repositories and open-source projects on GitHub
         </p>
+
+        <h3 className={styles.groupTitle}>Selected work</h3>
+        <div className={styles.projectsGrid}>
+          {featuredWork.map((project) => (
+            <article key={project.name} className={styles.projectCard}>
+              <div className={styles.cardHeader}>
+                <h3 className={styles.projectTitle}>{project.name}</h3>
+                <span className={styles.language}>From CV</span>
+              </div>
+              <p className={styles.description}>{project.description}</p>
+              <div className={styles.technologies}>
+                {project.technologies.map((technology) => (
+                  <span key={technology} className={styles.techTag}>{technology}</span>
+                ))}
+              </div>
+              <div className={styles.cardFooter}>
+                <span className={styles.projectLabel}>Featured project</span>
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.link}
+                >
+                  View code
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <h3 className={styles.groupTitle}>GitHub repositories</h3>
 
         {projects.length === 0 ? (
           <div className={styles.emptyState}>

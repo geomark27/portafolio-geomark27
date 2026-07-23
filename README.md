@@ -1,18 +1,18 @@
 # Software Developer Portfolio
 
-Professional portfolio website built with Next.js 14, TypeScript, and GitHub API integration.
+Professional portfolio website built with Next.js 16, TypeScript, and GitHub API integration.
 
 ## Features
 
 - 🎨 Dark mode native design with terminal-inspired aesthetics
 - 🚀 Dynamic project showcase using GitHub API
 - 📱 Fully responsive design
-- ⚡ Optimized performance with Next.js 14
+- ⚡ Optimized performance with Next.js 16
 - 🎯 SEO optimized
 
 ## Tech Stack
 
-- **Framework:** Next.js 14 (App Router)
+- **Framework:** Next.js 16 (App Router)
 - **Language:** TypeScript
 - **Styling:** CSS Modules with custom design system
 - **API:** GitHub REST API
@@ -69,7 +69,7 @@ Update the following files with your information:
 - `components/Hero.tsx`: Name, title, and tagline
 - `components/About.tsx`: Professional background and experience
 - `components/Skills.tsx`: Technical skills and expertise
-- `components/Contact.tsx`: Contact information and social links
+- `lib/config.ts`: Contact information, social links, and footer text
 
 ## Build for Production
 

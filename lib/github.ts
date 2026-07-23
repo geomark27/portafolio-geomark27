@@ -12,6 +12,9 @@ export async function fetchGitHubRepos(
   username: string,
   token?: string
 ): Promise<GitHubRepo[]> {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 8000);
+
   try {
     const headers: HeadersInit = {
       'Accept': 'application/vnd.github.v3+json',
@@ -26,6 +29,7 @@ export async function fetchGitHubRepos(
       {
         headers,
         next: { revalidate: 3600 }, // Revalidate every hour
+        signal: controller.signal,
       }
     );
 
@@ -35,13 +39,15 @@ export async function fetchGitHubRepos(
 
     const repos: GitHubRepo[] = await response.json();
     
-    // Filter out forks and sort by stars
+    // Filter out forks and prioritize repositories with the most public interest.
     return repos
       .filter(repo => !repo.fork)
       .sort((a, b) => b.stargazers_count - a.stargazers_count);
   } catch (error) {
     console.error('Error fetching GitHub repos:', error);
     return [];
+  } finally {
+    clearTimeout(timeout);
   }
 }
 

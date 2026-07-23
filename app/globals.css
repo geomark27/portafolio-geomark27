@@ -96,6 +96,20 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
   font-family: var(--font-sans);
   background-color: var(--color-bg-primary);
@@ -165,9 +179,13 @@ a:hover {
 /* Section */
 .section {
   padding: var(--spacing-3xl) 0;
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   align-items: center;
+}
+
+#hero {
+  min-height: 100vh;
 }
 
 .section-title {

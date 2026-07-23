@@ -5,6 +5,21 @@
   font-size: 1.125rem;
 }
 
+.groupTitle {
+  margin: var(--spacing-xl) 0 var(--spacing-md);
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.projectLabel {
+  color: var(--color-text-tertiary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

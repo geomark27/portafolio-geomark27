@@ -68,50 +68,53 @@ export default function Hero() {
                     </div>
                   </div>
                   
-                  <div 
+                  <button
+                    type="button"
                     className={`${styles.terminalLine} ${styles.clickable}`}
                     onClick={() => handleNavigate('about')}
                     title="Navigate to About section"
                   >
                     <span className={styles.prompt}>$</span> cd ./about
-                  </div>
+                  </button>
                   
-                  <div 
+                  <button
+                    type="button"
                     className={`${styles.terminalLine} ${styles.clickable}`}
                     onClick={() => handleNavigate('skills')}
                     title="Navigate to Skills section"
                   >
                     <span className={styles.prompt}>$</span> cd ./skills
-                  </div>
+                  </button>
                   
-                  <div 
+                  <button
+                    type="button"
                     className={`${styles.terminalLine} ${styles.clickable}`}
                     onClick={() => handleNavigate('projects')}
                     title="Navigate to Projects section"
                   >
                     <span className={styles.prompt}>$</span> cd ./projects
-                  </div>
+                  </button>
                 
                 </div>
               </div>
               
               {/* Stats Cards */}
               <div className={styles.statsGrid}>
-                <div className={styles.statCard} onClick={() => handleNavigate('about')}>
+                <button type="button" className={styles.statCard} onClick={() => handleNavigate('about')}>
                   <div className={styles.statValue}>3+</div>
                   <div className={styles.statLabel}>Years Experience</div>
                   <div className={styles.statIcon}>📅</div>
-                </div>
-                <div className={styles.statCard} onClick={() => handleNavigate('projects')}>
-                  <div className={styles.statValue}>20+</div>
-                  <div className={styles.statLabel}>Projects Delivered</div>
+                </button>
+                <button type="button" className={styles.statCard} onClick={() => handleNavigate('projects')}>
+                <div className={styles.statValue}>3</div>
+                <div className={styles.statLabel}>Professional Roles</div>
                   <div className={styles.statIcon}>🚀</div>
-                </div>
-                <div className={styles.statCard} onClick={() => handleNavigate('contact')}>
+                </button>
+                <button type="button" className={styles.statCard} onClick={() => handleNavigate('contact')}>
                   <div className={styles.statValue}>99%</div>
                   <div className={styles.statLabel}>Client Satisfaction</div>
                   <div className={styles.statIcon}>⭐</div>
-                </div>
+                </button>
               </div>
             </div>
 

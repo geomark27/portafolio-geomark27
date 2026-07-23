@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Marcos Ramos | Portfolio",
   description: "Software Developer y AWS Solutions Architect con +3 años de experiencia diseñando sistemas distribuidos de alta demanda. Especializado en arquitecturas escalables para CRM, ERP y SaaS multitenant.",
   keywords: ["Software Developer", "AWS Solutions Architect", "Distributed Systems", "Microservices", "Cloud Architecture", "Node.js", "Python", "DevOps"],
-  authors: [{ name: "Software Developer" }],
+  authors: [{ name: "Marcos Ramos" }],
   openGraph: {
     title: "Marcos Ramos",
     description: "Especializado en arquitecturas escalables y sistemas distribuidos de alta demanda",
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="en">
       <body>
         <Providers>
           {children}

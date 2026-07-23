@@ -9,15 +9,14 @@ export default function About() {
         <div className={styles.aboutContent}>
           <div className={styles.mainContent}>
             <p className={styles.intro}>
-              Software Developer and AWS Solutions Architect with over 3 years of experience 
-              designing and building high-demand distributed systems.
+              Senior Software Engineer with over 3 years of experience building high-performance
+              backend systems, microservice architectures, and cloud solutions for production environments.
             </p>
             
             <p>
-              My specialty is creating scalable and resilient architectures for complex 
-              enterprise platforms, including CRM, ERP, and multitenant SaaS solutions. 
-              I've worked on projects handling hundreds of daily transactions, 
-              optimizing performance and reducing infrastructure costs.
+              I specialize in Spring Boot, .NET Core, Go, and PHP/Laravel, with experience designing
+              REST APIs, asynchronous processing, legacy-system migrations, and AWS solutions.
+              I&apos;m passionate about performance optimization and building scalable platforms that drive business impact.
             </p>
 
             <div className={styles.highlights}>
@@ -32,8 +31,8 @@ export default function About() {
               <div className={styles.highlight}>
                 <h3>☁️ Cloud & DevOps</h3>
                 <p>
-                  Deep experience in AWS (EC2, Lambda, RDS, S3, CloudFormation). 
-                  Implementation of robust CI/CD pipelines and infrastructure automation.
+                  AWS Solutions Architect certified, with hands-on experience in EC2, Lambda, RDS Aurora,
+                  CloudFront, infrastructure as code, and cloud-native delivery.
                 </p>
               </div>
 
@@ -53,8 +52,8 @@ export default function About() {
               <div className={styles.statLabel}>Years of Experience</div>
             </div>
             <div className={styles.stat}>
-              <div className={styles.statValue}>20+</div>
-              <div className={styles.statLabel}>Completed Projects</div>
+              <div className={styles.statValue}>3</div>
+              <div className={styles.statLabel}>Professional Roles</div>
             </div>
             <div className={styles.stat}>
               <div className={styles.statValue}>AWS</div>

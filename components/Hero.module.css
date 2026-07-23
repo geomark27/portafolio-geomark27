@@ -94,6 +94,15 @@
   transition: all 0.3s ease;
 }
 
+button.terminalLine {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+}
+
 .terminalLine.clickable {
   cursor: pointer;
   padding: var(--spacing-xs);
@@ -207,6 +216,8 @@
   overflow: hidden;
   animation: statCardGlow 3s ease-in-out infinite;
   animation-delay: calc(var(--card-index, 0) * 0.3s);
+  color: inherit;
+  font: inherit;
 }
 
 @keyframes statCardGlow {
@@ -519,4 +530,3 @@
     justify-content: center;
   }
 }
-
