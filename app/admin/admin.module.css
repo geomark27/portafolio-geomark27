@@ -1,0 +1,324 @@
+.page {
+  min-height: 100vh;
+  padding: var(--spacing-2xl) var(--spacing-md);
+  background: var(--color-bg-primary);
+}
+
+.authCard,
+.setupCard,
+.dashboard {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.authCard,
+.setupCard,
+.panel {
+  padding: var(--spacing-xl);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+}
+
+.authCard,
+.setupCard {
+  max-width: 480px;
+}
+
+.authCard h1,
+.setupCard h1,
+.dashboardHeader h1 {
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-primary);
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.authCard > p:not(.eyebrow),
+.setupCard > p:not(.eyebrow) {
+  color: var(--color-text-secondary);
+}
+
+.eyebrow {
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-accent-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.form {
+  display: grid;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.form label {
+  display: grid;
+  gap: 0.4rem;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  color: var(--color-text-primary);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font: inherit;
+  resize: vertical;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: 2px solid var(--color-accent-cyan);
+  outline-offset: 1px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-md);
+}
+
+.formSectionTitle {
+  margin: var(--spacing-lg) 0 0;
+  padding-top: var(--spacing-lg);
+  color: var(--color-text-primary);
+  border-top: 1px solid var(--color-border);
+  font-size: 1.1rem;
+}
+
+.fieldHint {
+  color: var(--color-text-tertiary);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+}
+
+.dashboard {
+  display: grid;
+  gap: var(--spacing-xl);
+}
+
+.dashboardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
+.dashboardHeader h1 {
+  margin: 0;
+}
+
+.panel h2 {
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.panel {
+  padding: 0;
+  overflow: hidden;
+  scroll-margin-top: var(--spacing-md);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.panelOpen {
+  border-color: rgba(6, 182, 212, 0.45);
+  box-shadow: 0 8px 30px rgba(6, 182, 212, 0.08);
+}
+
+.accordionHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  color: var(--color-text-primary);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.accordionHeader:hover {
+  background: rgba(6, 182, 212, 0.06);
+}
+
+.accordionHeader > span:first-child {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.accordionHeader strong {
+  font-size: 1.25rem;
+}
+
+.accordionHeader small {
+  color: var(--color-text-tertiary);
+  font-size: 0.8rem;
+}
+
+.accordionIcon {
+  color: var(--color-accent-cyan);
+  font-size: 1.5rem;
+  line-height: 1;
+  transition: transform var(--transition-fast);
+}
+
+.accordionHeader[aria-expanded='true'] .accordionIcon {
+  transform: rotate(180deg);
+}
+
+.accordionContent {
+  padding: 0 var(--spacing-xl) var(--spacing-xl);
+  border-top: 1px solid var(--color-border);
+}
+
+.accordionContent[hidden] {
+  display: none;
+}
+
+.notice,
+.error {
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  color: var(--color-accent-emerald);
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.error {
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.1);
+}
+
+.experienceList {
+  display: grid;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+}
+
+.experienceCard {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: opacity var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.experienceCard[draggable='true'] {
+  cursor: grab;
+}
+
+.experienceCard[draggable='true']:active {
+  cursor: grabbing;
+}
+
+.dragging {
+  opacity: 0.45;
+  border-color: var(--color-accent-cyan);
+  transform: scale(0.99);
+}
+
+.experienceItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+}
+
+.experienceItem div {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.experienceItem span {
+  color: var(--color-text-tertiary);
+  font-size: 0.875rem;
+}
+
+.experienceItem strong {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.dragHandle {
+  color: var(--color-text-muted) !important;
+  font-family: var(--font-mono);
+  letter-spacing: -0.2em;
+  user-select: none;
+}
+
+.experienceActions {
+  display: flex !important;
+  align-items: center;
+  gap: var(--spacing-xs) !important;
+}
+
+.pinBadge {
+  padding: 0.3rem 0.55rem;
+  color: var(--color-accent-emerald) !important;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid var(--color-accent-emerald);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.7rem !important;
+  text-transform: uppercase;
+}
+
+.editButton,
+.deleteButton {
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.editButton {
+  color: var(--color-accent-cyan);
+  border: 1px solid var(--color-accent-cyan);
+}
+
+.deleteButton {
+  color: #f87171;
+  border: 1px solid #f87171;
+}
+
+.experienceEditor {
+  margin: 0;
+  padding: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.checkboxLabel {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  align-self: end;
+  gap: var(--spacing-xs) !important;
+  min-height: 43px;
+}
+
+.checkboxLabel input {
+  width: auto;
+  accent-color: var(--color-accent-cyan);
+}
+
+@media (max-width: 640px) {
+  .page { padding: var(--spacing-lg) var(--spacing-sm); }
+  .authCard, .setupCard { padding: var(--spacing-lg); }
+  .accordionHeader { padding: var(--spacing-md) var(--spacing-lg); }
+  .accordionContent { padding: 0 var(--spacing-lg) var(--spacing-lg); }
+  .formGrid { grid-template-columns: 1fr; }
+  .dashboardHeader { align-items: flex-start; flex-direction: column; }
+  .experienceItem { align-items: flex-start; flex-direction: column; }
+  .experienceActions { flex-wrap: wrap; }
+}

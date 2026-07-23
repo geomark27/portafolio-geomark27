@@ -1,10 +1,11 @@
 'use client';
 import { useEffect, useState } from 'react';
+import type { SiteProfile } from '@/lib/admin-types';
 import styles from './Hero.module.css';
 
-export default function Hero() {
+export default function Hero({ profile }: { profile: SiteProfile }) {
   const [displayedText, setDisplayedText] = useState('');
-  const fullText = 'Software Developer & AWS Solutions Architect';
+  const fullText = profile.hero_role;
 
   useEffect(() => {
     let index = 0;
@@ -18,7 +19,7 @@ export default function Hero() {
     }, 50);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [fullText]);
 
   const handleNavigate = (section: string) => {
     const element = document.getElementById(section);
@@ -41,14 +42,14 @@ export default function Hero() {
                     <span className={styles.terminalBtn} style={{background: '#ffbd2e'}}></span>
                     <span className={styles.terminalBtn} style={{background: '#27c93f'}}></span>
                   </div>
-                  <span className={styles.terminalTitle}>marcos@portfolio:~</span>
+                  <span className={styles.terminalTitle}>{profile.name.split(' ')[0].toLowerCase()}@portfolio:~</span>
                   <div style={{width: '52px'}}></div>
                 </div>
                 <div className={styles.terminalBody}>
                   <div className={styles.terminalLine}>
                     <span className={styles.prompt}>$</span> whoami
                   </div>
-                  <div className={styles.terminalOutput}>Marcos Ramos</div>
+                  <div className={styles.terminalOutput}>{profile.name}</div>
                   
                   <div className={styles.terminalLine}>
                     <span className={styles.prompt}>$</span> cat role.txt
@@ -101,53 +102,54 @@ export default function Hero() {
               {/* Stats Cards */}
               <div className={styles.statsGrid}>
                 <button type="button" className={styles.statCard} onClick={() => handleNavigate('about')}>
-                  <div className={styles.statValue}>3+</div>
+                  <div className={styles.statValue}>{profile.years_experience}+</div>
                   <div className={styles.statLabel}>Years Experience</div>
                   <div className={styles.statIcon}>📅</div>
                 </button>
                 <button type="button" className={styles.statCard} onClick={() => handleNavigate('projects')}>
-                <div className={styles.statValue}>3</div>
+                <div className={styles.statValue}>{profile.professional_roles}</div>
                 <div className={styles.statLabel}>Professional Roles</div>
                   <div className={styles.statIcon}>🚀</div>
                 </button>
                 <button type="button" className={styles.statCard} onClick={() => handleNavigate('contact')}>
-                  <div className={styles.statValue}>99%</div>
-                  <div className={styles.statLabel}>Client Satisfaction</div>
-                  <div className={styles.statIcon}>⭐</div>
+                  <div className={styles.statValue}>{profile.hero_third_stat_value}</div>
+                  <div className={styles.statLabel}>{profile.hero_third_stat_label}</div>
+                  <div className={styles.statIcon}>{profile.hero_third_stat_icon}</div>
                 </button>
               </div>
             </div>
 
             {/* Content Section */}
             <div className={styles.heroText}>
-              <div className={styles.badge}>
-                <span className={styles.badgeDot}>●</span>
-                Available for work
+              <div className={`${styles.badge} ${!profile.is_available ? styles.badgeUnavailable : ''}`}>
+                <span className={styles.badgeDot} aria-hidden="true">{profile.is_available ? '●' : '○'}</span>
+                {profile.availability_text}
               </div>
               
               <h1 className={`${styles.title} fade-in-up`}>
-                Building Efficient Distributed Systems
+                {profile.hero_title}
               </h1>
 
               <p className={`${styles.subtitle} fade-in-up`}>
-                Backend developer specialized in high-performance architectures and I/O, optimization for multitenant SaaS. Cloud-native solutions with AWS expertise.
+                {profile.hero_description}
               </p>
 
               {/* Tech Badges */}
               <div className={styles.techStack}>
-                <span className={styles.techBadge} title="Primary language for microservices">🐹 Go</span>
-                <span className={styles.techBadge} title="Cloud platform & architecture">☁️ AWS</span>
-                <span className={styles.techBadge} title="Enterprise database systems">🗄️ SQL Server</span>
-                <span className={styles.techBadge} title="Container orchestration">🐳 Docker</span>
+                {profile.hero_technologies.map((technology) => (
+                  <span key={`${technology.icon}-${technology.label}`} className={styles.techBadge} title={technology.title}>
+                    {technology.icon} {technology.label}
+                  </span>
+                ))}
               </div>
               
               <div className={`${styles.cta} fade-in-up`}>
                 <a href="#projects" className="btn btn-primary">
-                  <span>View Projects</span>
+                  <span>{profile.hero_primary_cta_text}</span>
                   <span className={styles.arrow}>→</span>
                 </a>
                 <a href="#contact" className="btn btn-secondary">
-                  <span>Get in Touch</span>
+                  <span>{profile.hero_secondary_cta_text}</span>
                 </a>
               </div>
             </div>

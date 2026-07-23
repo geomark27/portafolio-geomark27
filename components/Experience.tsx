@@ -1,7 +1,9 @@
-import { experience } from '@/lib/profile';
+import { getExperiences } from '@/lib/content';
 import styles from './Experience.module.css';
 
-export default function Experience() {
+export default async function Experience() {
+  const experience = await getExperiences();
+
   return (
     <section className={`section ${styles.experienceSection}`} id="experience">
       <div className="container">
